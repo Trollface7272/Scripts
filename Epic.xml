@@ -1,0 +1,67 @@
+<Window var="EpicMenu" name="Epic Menu" width="550" height="500" x="250" y="300">
+    <Tab name="Legit">
+        <Groupbox name="Visuals">
+            <Checkbox var="EspWhileDead" name="Esp While Dead" desc="Enable visuals while you are dead.">
+            </Checkbox>
+            <Checkbox var="EspToggle" name="Esp Toggle" desc="Toggles blatant visuals.">
+            </Checkbox>
+        </Groupbox>
+    </Tab>
+    <Tab name="Ragebot">
+    
+    </Tab>
+    <Tab name="Anti-Aim">
+        <Groupbox name="Anti-Aim">
+            <Combobox var="AntiAimYawMode" name="Yaw Changer Mode" options=["None", "Cycle", "Jitter"]>
+            </Combobox>
+            <Slider var="YawMin" name="Minimal Yaw" min="-180" max="180" desc="Minimal yaw changer yaw.">
+            </Slider>
+            <Slider var="YawMax" name="Maximal Yaw" min="-180" max="180" desc="Maximal yaw changer yaw.">
+            </Slider>
+            <Checkbox var="DisableAAOnFreeze" name="Disable AA On Freeze Time" desc="Disables Anti-Aim on freeze time">
+            </Checkbox>
+            <Checkbox var="LegitAAOnE" name="Legit Anti-Aim On E" desc="Use Legit AA when holding E">
+            </Checkbox>
+        </Groupbox>
+    </Tab>
+    <Tab name="Visuals">
+        <Groupbox name="Extra">
+            <Checkbox var="DisablePanoramaBlur" name="Disable Panorama Blur" desc="Disables panorama blur.">
+            </Checkbox>
+            <Checkbox var="FakeDuckIndicator" name="Fake Duck Indicator" desc="Show text above people that are fakeducking.">
+            </Checkbox>
+            <Checkbox var="HealthShot" name="Health Shot Effect" desc="Health shot effect on kill.">
+            </Checkbox>
+            <Checkbox var="FOVMarker" name="FOV Marker On Kill" desc="Changes FOV on kill.">
+            </Checkbox>
+        </Groupbox>
+    </Tab>
+    <Tab name="Misc">
+        <Groupbox name="Movement" width="250">
+            <Keybox var="DoorSpamKeybind" name="Door Spam" desc="Rapidly opens and closes doors.">
+            </Keybox>
+            <Keybox var="AirStuck" name="Air Stuck" desc="Completly freezes your model in air.">
+            </Keybox>
+        </Groupbox>
+        <Groupbox name="Changers" width="250" x="280" y="16">
+            <Slider var="MusicKit" name="Music Kit Changer" min="1" max="50" desc="Changes your music kit.">,
+            </Slider>
+        </Groupbox>
+        <Groupbox name="Extra" width="250" x="16" y="220">
+            <Checkbox var="Hitsay" name="Hitsay" desc="Sends message when you hit someone.">
+            </Checkbox>
+            <Checkbox var="DisableSpecList" name="Disable Spectator List" desc="Disables spectators when not spectated.">
+            </Checkbox>
+        </Groupbox>
+    </Tab>
+    <Tab name="Player List">
+        <Groupbox name="Player List">
+            <Listbox var="Players" width="150" height="300">
+            </Listbox>
+            <Checkbox name="Box" x="175" y="0">
+                <ColorPicker name="Color">
+                </ColorPicker>
+            </Checkbox>
+        </Groupbox>
+    </Tab>
+</Window>
