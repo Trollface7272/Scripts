@@ -1,4 +1,4 @@
--- Note that the first few calls will every time return nil
+-- Note that the first few calls will return zeros
 -- It's due to API limitations
 -- panorama.RunScript is not Asynchronous
 -- Meaning that we can't just wait for the script to finish executing
