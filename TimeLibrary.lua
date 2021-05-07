@@ -29,9 +29,9 @@ TimeLib = {
     GetTime = function(self)
         if self:CheckInvalidity() then return end
         local o = {}
-        o.Hours   = self.FillZeros(math.floor(self.Now / 60 / 60))
-        o.Minutes = self.FillZeros(math.floor(self.Now / 60 % 60))
-        o.Seconds = self.FillZeros(self.Now % 60)
+        o.Hours   = self:GetHours()
+        o.Minutes = self:GetMinutes()
+        o.Seconds = self:GetSeconds()
         return o
     end,
     GetHours = function(self)
