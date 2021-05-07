@@ -14,7 +14,7 @@ TimeLib = {
         self.Offset = globals.RealTime()
     end,
     CheckInvalidity = function(self)
-        if self.Raw == nil or self.Raw < 10 then self.Raw = tonumber(client.GetConVar("panorama_dump_events_backlog")) return true end
+        if self.Raw == nil or self.Raw <= 1 then self.Raw = tonumber(client.GetConVar("panorama_dump_events_backlog")) return true end
         self:UpdateNow()
         return false 
     end,
@@ -27,7 +27,9 @@ TimeLib = {
         return input
     end,
     GetTime = function(self)
-        if self:CheckInvalidity() then return end
+        if self:CheckInvalidity() then 
+            return { Hours = 0, Minutes = 0, Seconds = 0 }
+        end
         local o = {}
         o.Hours   = self:GetHours()
         o.Minutes = self:GetMinutes()
@@ -35,15 +37,15 @@ TimeLib = {
         return o
     end,
     GetHours = function(self)
-        if self:CheckInvalidity() then return end
+        if self:CheckInvalidity() then return 0 end
         return self.FillZeros(math.floor(self.Now / 60 / 60))
     end,
     GetMinutes = function(self)
-        if self:CheckInvalidity() then return end
+        if self:CheckInvalidity() then return 0 end
         return self.FillZeros(math.floor(self.Now / 60 % 60))
     end,
     GetSeconds = function(self)
-        if self:CheckInvalidity() then return end
+        if self:CheckInvalidity() then return 0 end
         return self.FillZeros(self.Now % 60)
     end
 }
