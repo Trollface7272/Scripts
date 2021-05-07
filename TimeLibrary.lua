@@ -48,12 +48,3 @@ TimeLib = {
     end
 }
 TimeLib:_Init()
-
--- Example 
-callbacks.Register("Draw", function()
-	--Insane Watermark Drawing here
-	local time = TimeLib:GetTime()
-	if time ~= nil then
-		print(TimeLib:GetHours() .. ":" .. TimeLib:GetMinutes() .. ":" .. TimeLib:GetSeconds())
-	end
-end)
