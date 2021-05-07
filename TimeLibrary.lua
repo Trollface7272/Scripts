@@ -15,6 +15,7 @@ TimeLib = {
     end,
     CheckInvalidity = function(self)
         if self.Raw == nil or self.Raw < 10 then self.Raw = tonumber(client.GetConVar("panorama_dump_events_backlog")) return true end
+        self:UpdateNow()
         return false 
     end,
     UpdateNow = function(self)
@@ -27,7 +28,6 @@ TimeLib = {
     end,
     GetTime = function(self)
         if self:CheckInvalidity() then return end
-        self:UpdateNow()
         local o = {}
         o.Hours   = self.FillZeros(math.floor(self.Now / 60 / 60))
         o.Minutes = self.FillZeros(math.floor(self.Now / 60 % 60))
