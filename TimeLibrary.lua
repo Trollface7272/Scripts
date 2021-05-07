@@ -3,7 +3,7 @@
 -- panorama.RunScript is not Asynchronous
 -- Meaning that we can't just wait for the script to finish executing
 -- Resulting in convar not changing when we read it for first few times
-local TimeLib = {
+TimeLib = {
     Raw = -1,
     Offset = -1,
     Now = -1,
