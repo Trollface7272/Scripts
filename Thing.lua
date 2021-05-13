@@ -1,3 +1,5 @@
+local version = "1"
+if http.Get "https://pastebin.com/raw/LxkMAmt5" ~= version then print("Download new version from forums https://aimware.net/forum/thread/151596") end
 local Images = {
     onMenu = {
         images = {},
