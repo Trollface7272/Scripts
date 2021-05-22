@@ -8,7 +8,7 @@ local BacktrackValues = {["Zeus"] = 0,["Pistol"] = 0,["Heavy Pistol"] = 0,["Subm
 
 Weapons.ToGroup = {["deagle"]="Heavy Pistol",["elite"]="Pistol",["fiveseven"]="Pistol",["glock"]="Pistol",["ak47"]="Rifle",["aug"]="Rifle",["awp"]="Sniper",["famas"]="Rifle",["g3sg1"]="Auto Sniper",["galilar"]="Rifle",["m249"]="Light Machine Gun",["m4a1"]="Rifle",["mac10"]="Submachine Gun",["p90"]="Submachine Gun",["mp5sd"]="Submachine Gun",["ump45"]="Submachine Gun",["xm1014"] ="Shotgun",["bizon"]="Submachine Gun",["mag7"]="Shotgun",["negev"]="Light Machine Gun",["sawedoff"]="Shotgun",["tec9"]="Pistol",["taser"]="Zeus",["hkp2000"]="Pistol",["mp7"]="Submachine Gun",["mp9"]="Submachine Gun",["nova"]="Shotgun",["p250"]="Pistol",["scar20"]="Auto Sniper",["sg556"]="Rifle",["ssg08"]="Scout",["m4a1_silencer"]="Rifle",["usp_silencer"]="Pistol",["cz75a"]="Pistol",["revolver"]="Heavy Pistol"}
 
-Menu.Ref = gui.Reference("Legitbot", "Weapon", "Accuracy")
+Menu.Ref = gui.Reference("Legitbot", "Weapon", "Target")
 Menu.LastSelectedBox = Menu:GetGroup()
 Menu.LastValue = BacktrackValues[Menu.LastSelectedBox]
 Menu.Slider = gui.Slider(Menu.Ref, "", "Backtrack", BacktrackValues[Menu.LastSelectedBox], 0, 400)
