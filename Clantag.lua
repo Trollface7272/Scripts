@@ -71,7 +71,6 @@ local Clantag = {
             curTag = curTag:sub(#curTag) .. curTag:sub(1, -2)
             table.insert(out, curTag)
         end
-        for k,v in pairs(out) do print(v) end
         self.tag = out
     end,
     DrawHook = function(self)
