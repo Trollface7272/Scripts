@@ -9,7 +9,7 @@ local Clantag = {
     reverse = " ‮",
     tag = {},
     ffi = {
-        _SetClantag = ffi.cast("int(__fastcall*)(const char*, const char*)", mem.FindPattern("engine.dll", "53 56 57 8B DA 8B F9 FF 15")),
+        _SetClantag = ffi.cast('int(__fastcall*)(const char*, const char*)', mem.GetModuleBase('engine.dll') + 0x8DA80),
         _LastTag = "",
         SetClantag = function(self, tag)
             if tag == self._LastTag then return end
